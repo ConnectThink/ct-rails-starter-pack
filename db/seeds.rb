@@ -21,4 +21,16 @@ u = User.new(
 )
 u.skip_confirmation!
 u.skip_reconfirmation!
+u.roles << r
+u.save!
+
+# Temporary non-admin account
+u = User.new(
+    email: 'other@example.com',
+    first_name: 'System',
+    last_name: 'User',
+    password: '1234'
+)
+u.skip_confirmation!
+u.skip_reconfirmation!
 u.save!
