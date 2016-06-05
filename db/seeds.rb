@@ -17,10 +17,8 @@ u = User.new(
     email: 'admin@example.com',
     first_name: 'System',
     last_name: 'Administrator',
-    password: '1234'
+    password: '123456'
 )
-u.skip_confirmation!
-u.skip_reconfirmation!
 u.roles << r
 u.save!
 
@@ -29,8 +27,6 @@ u = User.new(
     email: 'other@example.com',
     first_name: 'System',
     last_name: 'User',
-    password: '1234'
+    password: '123456'
 )
-u.skip_confirmation!
-u.skip_reconfirmation!
 u.save!
